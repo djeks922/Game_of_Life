@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.8.9)
 
 project(Drawing)
 
+
 set(CMAKE_BUILD_TYPE Release)
 
 

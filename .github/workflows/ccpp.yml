@@ -1,4 +1,6 @@
+
 name: C - CI
+
 
 on:
   push:
@@ -6,12 +8,14 @@ on:
   pull_request:
     branches: [ master ]
 
+
 jobs:
   build_linux:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
+
     - name: 'Packages'
       run: |
          sudo apt update
@@ -68,4 +72,5 @@ jobs:
     
       
     
+
     

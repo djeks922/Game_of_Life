@@ -1,12 +1,15 @@
 cmake_minimum_required(VERSION 2.8.9)
 project (Gol)
 
+
 cmake_policy(SET CMP0076 NEW)
+
 add_subdirectory(Game)
 add_subdirectory(Drawing)
 
 add_executable(Gol main.c)
 target_link_libraries(Gol PUBLIC game draw )
+
 
 set(Test_PROJECT libtest)
 add_executable(${Test_PROJECT})
@@ -31,3 +34,5 @@ COMMAND gcovr --html --html-detail -o index.html -r ${CMAKE_SOURCE_DIR} ${CMAKE_
 WORKING_DIRECTORY ${CMAKE_BINARY_DIR}	)
 
 #add_custom_target(dist ALL COMMAND tar -czvf Gol.taz.gz ${CMAKE_BINARY_DIR} )
+=======
+
