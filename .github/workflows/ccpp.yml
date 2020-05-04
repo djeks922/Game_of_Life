@@ -57,9 +57,9 @@ jobs:
         sudo apt install libcunit1-dev
      - name: 'Coverage'
        run: |
-        - cd BuildCI
-        - mkdir Coverage
-        - cmake --build . --target cover_html
+         cd BuildCI
+         mkdir Coverage
+         cmake --build . --target cover_html
      - uses: actions/upload-artifact@v1
        with:
          name: binaries
