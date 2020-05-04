@@ -59,8 +59,7 @@ jobs:
        run: |
         - cd BuildCI
         - mkdir Coverage
-        - cmake --build .
-              target cover_html
+        - cmake --build .  target cover_html
      - uses: actions/upload-artifact@v1
        with:
          name: binaries
