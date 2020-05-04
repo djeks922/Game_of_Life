@@ -59,14 +59,12 @@ jobs:
      - name: 'Coverage'
        run: |
            cd BuildCI
-           mkdir Coverage
            chmod +x *
            make cover_html
-           cmake --build .
      - uses: actions/upload-artifact@v1
        with:
          name: binaries
-         path: BuildCI/Coverage       
+         path: BuildCI/      
     
       
     
