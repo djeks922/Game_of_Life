@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3e10468a20929eb30b3f404b439fe29af035089c
 name: C - CI
 
 on:
@@ -27,6 +31,7 @@ jobs:
         name: binaries
         path: BuildCI/
   test_linux:
+    needs: [build_linux]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v1
@@ -43,8 +48,8 @@ jobs:
           chmod +x *
           ctest -V
   cover_linux:
+    needs: [test_linux]
     runs-on: ubuntu-latest
-    needs: test_linux
     steps:
      - uses: actions/download-artifact@v1
        with:
